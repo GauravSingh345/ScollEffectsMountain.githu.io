@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Effect using GSAP Scroll</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <img src="bg.jpg" alt="" id="bg">
+        <h2 id="text">Mountains</h2>
+        <img src="man.png" alt="" id="man">
+        <img src="clouds_1.png" alt="" id="clouds_1">
+        <img src="clouds_2.png" alt="" id="clouds_2">
+        <img src="mountain_left.png" alt="" id="mountain_left">
+        <img src="mountain_right.png" alt="" id="mountain_right">
+        
+    </section>
+    <div class="sec">
+            <h2>Scrolltrigger is Awesome</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id distinctio tenetur consequatur sed necessitatibus, voluptas ipsum. Quam impedit sequi deleniti reiciendis accusantium commodi cum culpa magnam quasi fugit atque eos explicabo architecto tempore cupiditate similique eius excepturi corporis, iste dignissimos. Voluptatum enim maxime optio est iste accusantium, molestiae ratione a voluptatem minus similique tempora cum corporis voluptate magnam voluptatibus nesciunt.
+                
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quam dolore possimus quos illo consectetur accusantium, reiciendis hic magni adipisci eligendi commodi magnam, sapiente explicabo labore reprehenderit quis alias amet libero numquam! Sapiente assumenda, odio fugiat pariatur repudiandae sint sit tempora, incidunt eligendi harum debitis cum ex minus! Sint totam minima velit laborum! Molestiae fugit maxime nulla saepe perspiciatis, molestias laboriosam quidem autem temporibus? Maxime ipsum, numquam nulla distinctio libero asperiores accusamus! Unde distinctio iure, quis earum, quibusdam nostrum debitis excepturi qui dolores laboriosam quasi voluptatum aspernatur voluptatem minima accusantium? Quae ex accusamus modi aliquid nobis magni natus dolore vel?</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.to("#bg",{
+            scrollTrigger:{
+                scrub:1
+            },
+            scale :10.5
+        });
+
+        gsap.to("#man", {
+            scrollTrigger: {
+                scrub: 1
+            },
+            scale: 0.5
+        });
+
+        gsap.to("#mountain_left", {
+            scrollTrigger: {
+                scrub: 1
+            },
+            x: -500,
+        });
+
+        gsap.to("#mountain_right", {
+            scrollTrigger: {
+                scrub: 1
+            },
+            x: 500,
+        });
+
+        gsap.to("#clouds_1", {
+                scrollTrigger: {
+                    scrub: 1
+                },
+                x: 200,
+            });
+        gsap.to("#text", {
+            scrollTrigger: {
+                scrub: 1
+            },
+            y: 500,
+        });
+    </script>
+</body>
+</html>
